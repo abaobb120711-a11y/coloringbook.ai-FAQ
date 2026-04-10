@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Frequently Asked Questions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #111827;
+    --color-text-muted: #4b5563;
+    --color-border: #e5e7eb;
+    --color-primary: #FFBD1B;
+    --color-primary-light: #FFFBEA;
+    --transition: 0.2s ease-in-out;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    color: var(--color-text);
+  }
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+  .tab-btn {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .tab-btn:hover {
+    border-color: #d1d5db;
+    color: var(--color-text);
+  }
+  .tab-btn.active {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary);
+    color: #b38000;
+  }
+  .faq-panel { display: none; }
+  .faq-panel.active { display: block; }
+  .faq-item { border-bottom: 1px solid var(--color-border); }
+  .faq-item:first-child { border-top: 1px solid var(--color-border); }
+  .faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    background: none;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-align: left;
+    cursor: pointer;
+    transition: color var(--transition);
+  }
+  .faq-question:hover { color: #b38000; }
+  .faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #9ca3af;
+    transition: transform var(--transition);
+    line-height: 1;
+    margin-left: 1rem;
+  }
+  .faq-question.open .faq-icon {
+    transform: rotate(45deg);
+    color: var(--color-primary);
+  }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq-answer-inner {
+    padding-bottom: 1.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+  .faq-answer-inner p { margin: 0 0 1rem 0; }
+  .faq-answer-inner p:last-child { margin-bottom: 0; }
+  a { color: #b38000; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Frequently asked questions</h1>
+  <div class="tabs">
+    <button class="tab-btn active" data-target="getting-started">Getting Started</button>
+    <button class="tab-btn" data-target="creating-editing">Creating &amp; Editing</button>
+    <button class="tab-btn" data-target="downloading-printing">Downloading &amp; Printing</button>
+    <button class="tab-btn" data-target="account-pricing">Account &amp; Pricing</button>
+  </div>
+
+  <!-- Getting Started -->
+  <div class="faq-panel active" id="getting-started">
+
+    <div class="faq-item">
+      <button class="faq-question">What is Coloringbook.ai?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Coloringbook.ai is an AI coloring page generator that transforms text prompts and uploaded photos into high-quality, print-ready coloring pages in seconds. Whether you need a single coloring page for a personalized gift or a full coloring book ready for Amazon KDP publishing, Coloringbook.ai gives creators, parents, and publishers a fast and flexible way to generate professional results without any design experience.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I use Coloringbook.ai's AI coloring pages generator on PC and mobile?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Coloringbook.ai is entirely browser-based, so the AI coloring page generator runs on any modern device — desktop, laptop, tablet, or smartphone — with no app download required. You can generate a coloring page on your phone or build a complete coloring book on your desktop with the same seamless experience. For best results when producing full multi-page coloring books, a desktop browser is recommended.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Is the AI Coloring Pages Generator safe?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes, the AI Coloring Pages Generator on Coloringbook.ai is designed with your privacy and security in mind. All content is stored with encryption, and your generated coloring pages are never shared without your consent. Members with an active subscription can enable privacy mode, which ensures every coloring page you create remains visible only to you and is never displayed publicly.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How many free coloring pages do new users get each month?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Every new user on Coloringbook.ai receives 4 free credits per month to explore the AI coloring page generator — enough to create several coloring pages and get a feel for the platform. These credits refresh automatically each month, so you always have a way to generate coloring pages even without upgrading. For higher volume or access to advanced features like batch generation and Upscale for Print, a paid plan is recommended.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I start creating coloring pages on Coloringbook.ai?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Getting started is simple. Sign up for a free Coloringbook.ai account, head to the dashboard, and choose your creation mode: Text to Coloring Page lets you describe any scene and instantly generate a coloring page from your prompt; Image to Coloring Page converts an uploaded photo into a clean coloring page outline; and the AI Coloring Book Generator builds a full multi-page coloring book from a story or character concept. No design skills are needed — the AI handles the artwork for every coloring page.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I use the coloring pages I create for commercial purposes (e.g., Amazon KDP)?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. All coloring pages generated through Coloringbook.ai on a paid plan come with commercial usage rights, making them suitable for Amazon KDP self-publishing, selling digital coloring page downloads on Etsy or other platforms, or producing printed coloring books. Our KDP Builder feature even formats your coloring book pages to meet Amazon's exact print specifications. Please review our Terms of Service for complete details on commercial licensing.</p>
+      </div></div>
+    </div>
+
+  </div>
+
+  <!-- Creating & Editing -->
+  <div class="faq-panel" id="creating-editing">
+
+    <div class="faq-item">
+      <button class="faq-question">What happens to my credits if a coloring page generation fails?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>If the AI coloring page generator encounters an error and a coloring page fails to generate, the credits used for that attempt are automatically refunded to your Coloringbook.ai account — you will never be charged for a failed generation. If you notice a credit discrepancy after a failed coloring page attempt, please contact our support team and we'll resolve it promptly.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I choose different coloring page styles or age levels for my designs?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. When generating coloring pages or building a coloring book, you can select the target age group to tailor the complexity and style of the output — whether that's simple shapes for young children or intricate patterns for adults.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Does Coloringbook.ai support KDP-ready coloring book publishing?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. Coloringbook.ai includes a dedicated KDP Builder that automatically formats your coloring book to meet Amazon KDP's standard print requirements — correct page dimensions, safe margins, and the right file format. Once your coloring pages are generated and arranged, you can export a KDP-ready PDF directly from the platform, making it one of the most efficient AI coloring page generator tools for self-publishers.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I remove watermarks or enhance image quality?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Watermark removal and image upscaling are available on Coloringbook.ai paid plans. Once you're on a qualifying plan, you can disable watermarks directly in the coloring page download settings. The Upscale for Print feature enhances each coloring page to a higher resolution — ideal for professional print-on-demand and Amazon KDP publishing where sharp, clean lines are essential.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I batch-generate multiple coloring pages at once?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. The Coloringbook.ai AI coloring page generator supports batch creation, allowing you to generate dozens of unique coloring pages or build a complete coloring book in one workflow. This is especially useful for publishers producing themed coloring books at scale — you maintain consistent style across every coloring page while dramatically reducing production time.</p>
+      </div></div>
+    </div>
+
+  </div>
+
+  <!-- Downloading & Printing -->
+  <div class="faq-panel" id="downloading-printing">
+
+    <div class="faq-item">
+      <button class="faq-question">Where are my previously created coloring books?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>All your generated coloring pages and books are saved under Dashboard → My Creations. If you don't see a project, scroll down — older creations are listed chronologically.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Will my creation history be saved if I cancel my subscription?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. All your generation records are permanently saved to your account, regardless of whether you have an active subscription. Every coloring page and coloring book you've ever created on Coloringbook.ai remains accessible in your history — cancelling a plan never deletes your work.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What resolution are the downloaded coloring pages? Are they print-quality?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>When using the High Quality Print option (available on Hobby plan and above), the AI coloring page generator produces images at 1024 × 1528 px — suitable for standard 8.5×11" print at 120+ DPI. For professional KDP publishing requiring 300 DPI, we recommend the Upscale for Print feature available on Professional and Business plans. Without the 3:2 ratio selected, coloring pages are exported at 687 × 1024 px; with Upscale for Print enabled, resolution reaches 2748 × 4096 px for crisp, press-ready output.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What file formats can I download?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Coloringbook.ai supports two download formats for your generated coloring pages: PNG for individual high-resolution images, and PDF for complete coloring books or multi-page exports ready for printing or KDP upload. Both formats are available on paid plans, and the PDF export is the recommended option for Amazon KDP publishing.</p>
+      </div></div>
+    </div>
+
+  </div>
+
+  <!-- Account & Pricing -->
+  <div class="faq-panel" id="account-pricing">
+
+    <div class="faq-item">
+      <button class="faq-question">What's included in the free plan and premium plan?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>The free plan on Coloringbook.ai gives every new user 4 monthly credits to generate coloring pages and explore the AI coloring page generator. Premium plans unlock higher monthly credit allowances, batch generation, commercial usage rights, the Upscale for Print feature, watermark removal, and the KDP Builder tool for publishing-ready coloring books. Visit our <a href="https://www.coloringbook.ai/pricing" target="_blank" rel="noopener noreferrer">pricing page</a> for a full feature comparison.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How does the pricing work for unlimited coloring pages?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Coloringbook.ai plans are credit-based — each coloring page generation uses a set number of credits depending on the quality and format selected. Higher-tier plans provide more credits per billing cycle and unlock advanced features such as batch coloring page creation, Upscale for Print, and KDP-ready exports. Visit our <a href="https://www.coloringbook.ai/pricing" target="_blank" rel="noopener noreferrer">pricing page</a> to compare plans and find the right fit for your coloring page production volume.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I cancel or change my plan anytime?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Yes. You can upgrade, downgrade, or cancel your Coloringbook.ai subscription at any time from your account settings. Plan changes take effect at the start of the next billing cycle, and if you cancel, you retain full access to your current plan's coloring page generation features until the period ends.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">When do my monthly credits refresh?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Your Coloringbook.ai credits refresh on the anniversary of your subscription start date — not on the 1st of each calendar month. For example, if you subscribed on the 15th, your coloring page credits renew on the 15th of every subsequent month. You can check your next renewal date under Account → Billing Management.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">I accidentally purchased the wrong plan — can I get a refund?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Please contact our support team at <a href="mailto:support@coloringbook.ai">support@coloringbook.ai</a> or <a href="mailto:service@coloringbook.ai">service@coloringbook.ai</a> and review our <a href="https://www.coloringbook.ai/refund-policy" target="_blank" rel="noopener noreferrer">Refund Policy</a> for eligibility details and next steps.</p>
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do unused credits roll over when my subscription renews?<span class="faq-icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        <p>Monthly plan credits do not roll over at the end of each billing cycle — unused coloring page credits expire when your plan renews. Credits from purchased add-on packs are separate and are not subject to monthly expiry.</p>
+      </div></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const faqPanels = document.querySelectorAll('.faq-panel');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      faqPanels.forEach(panel => panel.classList.remove('active'));
+      document.getElementById(btn.getAttribute('data-target')).classList.add('active');
+    });
+  });
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const isOpen = question.classList.contains('open');
+      const panel = question.closest('.faq-panel');
+      panel.querySelectorAll('.faq-question.open').forEach(openQ => {
+        openQ.classList.remove('open');
+        openQ.nextElementSibling.style.maxHeight = null;
+      });
+      if (!isOpen) {
+        question.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+</body>
+</html>
